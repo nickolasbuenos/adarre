@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.uid == "q0A9lIzW3CMIc1t4E6hrEPlqNM72";
+    }
+
+    match /products/{productId} {
+      // Visitantes podem ler somente produtos disponíveis.
+      // O administrador pode ler todos os produtos.
+      allow read: if isAdmin() || resource.data.available == true;
+
+      // Somente o UID do administrador pode cadastrar, editar ou excluir.
+      allow create: if isAdmin()
+        && request.resource.data.keys().hasAll([
+          'name', 'description', 'price', 'category', 'available'
+        ])
+        && request.resource.data.name is string
+        && request.resource.data.price is number
+        && request.resource.data.price > 0
+        && request.resource.data.category in ['vestidos', 'conjuntos', 'blusas']
+        && request.resource.data.available is bool;
+
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Bloqueia qualquer outra coleção por padrão.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

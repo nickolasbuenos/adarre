@@ -1,0 +1,40 @@
+ADARRE - INTEGRACAO FIREBASE
+
+ARQUIVOS DESTE PACOTE
+- index.html: página pública atualizada para carregar produtos do Firestore.
+- script.js: catálogo dinâmico e carrinho/WhatsApp.
+- firebase.js: conexão com o projeto Firebase informado.
+- admin.html, admin.css, admin.js: painel administrativo.
+- firestore.rules: regras de segurança.
+
+ANTES DE TESTAR
+1. Faça uma cópia de segurança da pasta atual do site.
+2. Extraia os arquivos deste pacote dentro da pasta ADARRE, substituindo index.html e script.js.
+3. Mantenha seu style.css atual sem alterações.
+4. Mantenha adarre.jpg e logo.png na pasta, como já estão.
+5. No Firebase Console, abra Firestore Database > Regras.
+6. Substitua as regras pelas que estão no arquivo firestore.rules e clique em Publicar.
+7. No Firebase Console, abra Authentication > Settings > Authorized domains.
+   Confirme que localhost está autorizado. Se usar outro domínio depois, adicione-o.
+8. Abra a pasta pelo VS Code e inicie o Live Server. Não abra os HTML com duplo clique (file://).
+9. Acesse primeiro admin.html, entre com o e-mail e a senha do usuário administrador e cadastre um produto.
+10. Abra index.html pelo Live Server para conferir o produto no catálogo.
+
+CAMPOS DOS PRODUTOS
+- Nome
+- Descrição (opcional)
+- Preço
+- Categoria: vestidos, conjuntos ou blusas
+- Disponibilidade
+
+FOTOS
+O cadastro de fotos ainda não está incluído, conforme combinado. Não é necessário ativar Firebase Storage agora.
+
+SEGURANCA
+O UID do administrador fica no admin.js e nas regras do Firestore. As regras são a proteção real dos dados; esconder a página ou o botão não é suficiente.
+Não compartilhe a senha do Firebase.
+A configuração web do Firebase identifica o projeto e não equivale a uma chave privada de conta de serviço.
+
+OBSERVACAO
+O catálogo público consulta apenas documentos com available == true.
+O painel administrativo lista todos os produtos.

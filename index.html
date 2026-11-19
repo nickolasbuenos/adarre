@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>   
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adarré – Moda feminina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="top">
+   <span aria-hidden="true"></span>
+   <a class="logo" href="#inicio" aria-label="Adarré Vesti.com">Adarré</a>
+   <button class="cart" id="cartbtn" aria-label="Abrir carrinho">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L21 7H6"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.3" fill="currentColor"/>
+    <circle cx="18" cy="20" r="1.3" fill="currentColor"/>
+  </svg>
+  <span id="n">0</span>
+</button>
+  </div>
+   <nav aria-label="Categorias">
+   <a href="#inicio">Início</a>
+<a href="#produtos" data-cat="novidades">Novidades</a>
+<a href="#produtos" data-cat="mais-vendidos">Mais Vendidos</a>
+<a href="#produtos" data-cat="achadinhos">Achadinhos</a>
+<a href="#produtos" data-cat="looks-fim-semana">Looks</a>
+<a href="#produtos" data-cat="promocoes">Promoções</a>
+<a href="#sobre">Sobre nós</a>
+<a href="#contato">Contato</a>
+   </nav>
+ </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero" id="inicio">
+  <div class="wrap hero-inner">
+
+    <div class="hero-text">
+      <span class="hero-subtitle">ADARRÉ VESTI COM</span>
+
+      <h1>Elegância feminina, do dia a dia ao especial</h1>
+
+      <p>
+        Moda casual, social e elegante! Blusas a partir de R$ 29,90 e vestidos
+        de vários modelos para você arrasar em qualquer ocasião!
+      </p>
+
+      <a class="btn" href="#produtos">Ver coleção</a>
+    </div>
+
+    <div class="hero-carousel">
+
+      <div class="carousel-image">
+        <img
+          id="hero-image"
+          src="adarre.jpg"
+          alt="Coleção Adarré"
+        >
+      </div>
+
+      <button class="carousel-arrow prev" id="hero-prev" aria-label="Foto anterior">
+        &#10094;
+      </button>
+
+      <button class="carousel-arrow next" id="hero-next" aria-label="Próxima foto">
+        &#10095;
+      </button>
+
+<div class="carousel-dots" id="hero-dots"></div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<div class="perks"><div class="wrap">
+ <div><b>Envio para Icaivera e região</b><span>Receba da sua casa</span></div>
+ <div><b>Até 5x sem juros</b><span>Confira condições</span></div>
+ <div><b>Nossos produtos</b><span>Qualidade e conforto que você merece</span></div>
+ <div><b>Atendimento no WhatsApp</b><span>Resposta rápida</span></div>
+</div></div>
+
+<section id="produtos"><div class="wrap">
+ <h2 id="ptitle">Novidades da Semana</h2>
+ <div class="grid" id="grid"><p class="catalog-status">Carregando produtos...</p></div>
+</div></section>
+
+<section class="about" id="sobre"><div class="wrap">
+ <img src="foto-adarre.jpg" alt="Loja Adarré" class="about-image">
+ <div>
+  <h2>Sobre a Adarré</h2>
+  <p>A Adarré nasceu em Icaivera, Betim, com um propósito simples: oferecer moda feminina elegante a preços acessíveis. Cada peça é escolhida pensando em caimento, conforto e versatilidade.</p>
+  <p>Atendemos na loja física e online, pelo WhatsApp com link no próprio site.</p>
+  <a class="btn ghost" href="https://www.instagram.com/adarrevesticom/" target="_blank" rel="noopener">Siga no Instagram</a>
+ </div>
+</div></section>
+
+
+<section>
+  <div class="wrap">
+    <h2>Elas usam Adarré</h2>
+    <p class="sub">Alguns looks de nossas clientes</p>
+
+    <div class="uses">
+      <div>
+        <img src="cliente1.jpg" alt="Cliente usando Adarré">
+        <p>Vestido longo</p>
+      </div>
+
+      <div>
+        <img src="cliente2.jpg" alt="Cliente usando Adarré">
+        <p>Conjunto de verão</p>
+      </div>
+
+      <div>
+        <img src="cliente3.jpg" alt="Cliente usando Adarré">
+        <p>Look de fim de semana</p>
+      </div>
+
+      <div>
+        <img src="cliente4.jpg" alt="Cliente usando Adarré">
+        <p>Vestido assimétrico</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contato"><div class="wrap">
+ <div><span class="logo sm" role="img" aria-label="Adarré Vesti.com">Adarré</span><p>Loja de moda feminina em Betim, Minas Gerais.</p></div>
+ <div><h3>Departamentos</h3><ul>
+ <li><a href="#produtos" data-cat="novidades">Novidades da Semana</a></li>
+<li><a href="#produtos" data-cat="mais-vendidos">Mais Vendidos</a></li>
+<li><a href="#produtos" data-cat="achadinhos">Achadinhos a partir de R$ 29,90</a></li>
+<li><a href="#produtos" data-cat="looks-fim-semana">Looks para o Final de Semana</a></li>
+<li><a href="#produtos" data-cat="promocoes">Promoções Imperdíveis</a></li>
+</ul></div>
+ <div><h3>Contato</h3><ul><li>Av. Sycaba, 1151, Icaivera, Betim/MG</li><li>WhatsApp: (31) 99229-7248</li><li>@adarrevesticom</li></ul></div>
+ <div class="copy">© 2026 Adarré. Todos os direitos reservados.</div>
+</div></footer>
+
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-label="Sacola de compras" aria-hidden="true">
+ <div class="dh"><h2>Sua sacola</h2><button class="x" id="close" aria-label="Fechar sacola">&times;</button></div>
+ <div class="items" id="items"></div>
+ <div class="df"><div class="tot"><span>Total</span><span id="total">R$ 0,00</span></div><a class="btn" id="fin" href="#" target="_blank" rel="noopener">Finalizar pelo WhatsApp</a></div>
+</aside>
+
+<!-- JANELA DE DETALHES DO PRODUTO -->
+<div class="product-modal-overlay" id="product-modal">
+  <div class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+
+    <button class="product-modal-close" id="modal-close" aria-label="Fechar">
+      &times;
+    </button>
+
+    <div class="modal-gallery">
+
+      <div class="modal-main-image">
+        <button class="modal-arrow modal-prev" id="modal-prev" aria-label="Foto anterior">
+          &#10094;
+        </button>
+
+        <img id="modal-image" src="" alt="">
+
+        <button class="modal-arrow modal-next" id="modal-next" aria-label="Próxima foto">
+          &#10095;
+        </button>
+      </div>
+
+      <div class="modal-thumbnails" id="modal-thumbnails"></div>
+
+    </div>
+
+    <div class="modal-details">
+      <span class="modal-subtitle">ADARRÉ VESTI COM</span>
+
+      <h2 id="modal-name"></h2>
+
+      <p id="modal-description"></p>
+
+      <div class="modal-price" id="modal-price"></div>
+
+      <div id="modal-size-area"></div>
+
+      <small class="size-feedback" id="modal-feedback"></small>
+
+      <button class="btn modal-buy" id="modal-buy">
+        Adicionar à sacola
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+<a
+  href="https://wa.me/5531992297248?text=Olá!%20Vim%20pelo%20site%20da%20Adarré."
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Fale com a Adarré pelo WhatsApp"
+>
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor" d="M16 .5C7.45.5.5 7.45.5 16c0 2.73.72 5.4 2.08 7.76L.5 31.5l7.94-2.08A15.4 15.4 0 0 0 16 31.5c8.55 0 15.5-6.95 15.5-15.5S24.55.5 16 .5zm0 28.2a12.7 12.7 0 0 1-6.47-1.77l-.46-.27-4.72 1.24 1.26-4.6-.3-.48A12.7 12.7 0 1 1 16 28.7zm7-9.5c-.38-.19-2.23-1.1-2.58-1.23-.35-.13-.6-.19-.85.19-.25.38-.98 1.23-1.2 1.48-.22.25-.44.28-.82.09-.38-.19-1.6-.59-3.05-1.88-1.13-1.01-1.9-2.26-2.12-2.64-.22-.38-.02-.58.17-.77.17-.17.38-.44.57-.66.19-.22.25-.38.38-.63.13-.25.06-.47-.03-.66-.1-.19-.85-2.05-1.17-2.8-.3-.73-.62-.63-.85-.64h-.73c-.25 0-.66.09-1.01.47-.35.38-1.33 1.3-1.33 3.15s1.36 3.65 1.55 3.9c.19.25 2.67 4.07 6.47 5.7.9.39 1.6.63 2.15.8.9.29 1.72.25 2.37.15.72-.11 2.23-.91 2.55-1.8.32-.89.32-1.65.22-1.8-.09-.16-.35-.25-.73-.44z"/>
+  </svg>
+</a>
+</body>
+</html>
